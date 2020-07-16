@@ -1,0 +1,174 @@
+@import url("../css/null.css");
+//@import url('OwlCarousel/owl.carousel/dist/assets/owl.carousel.css');
+//@import url('OwlCarousel/owl.carousel');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+@mixin myGrid($display, $justifyItems, $justify, $align) {
+   display: $display;
+   justify-items: $justifyItems none;
+   justify-content: $justify;
+   align-items: $align;
+}
+
+@mixin propertyGrid($gTc, $gTr, $gAr, $gAf, $gac, $gcg, $grg) {
+   grid-template-columns: $gTc;
+   grid-template-rows: $gTr;
+   grid-auto-rows: $gAr;
+   grid-auto-flow: $gAf;
+   grid-auto-columns: $gac;
+   grid-gap: $gcg $grg;
+}
+
+%button {
+   text-transform: capitalize;
+   @include myGrid(flex, none, center, center);
+   cursor: pointer;
+   line-height: 1.1em;
+   letter-spacing: 0;
+   padding: 12px;
+   background: #ff700c;
+   color: #ffffff;
+   border-radius: 5px;
+   text-align: center;
+   font-size: 1em;
+   font-weight: bold;
+   margin: 0 0 1.5em 0;
+}
+.wraper {
+   overflow: hidden;
+   width: 100%;
+}
+.container {
+   overflow: hidden;
+   border-radius: 5px;
+   border: 0.5px solid rgba(19, 18, 18, 0.384);
+   padding: 0;
+   background: #f8f9fa;
+}
+.header {
+   .header__icon {
+      padding: 1.6em;
+   }
+}
+.content {
+   img {
+      width: 100%;
+   }
+}
+
+.section__1__background {
+   width: 100%;
+}
+.section__1__content {
+   @include myGrid(flex, none, center, center);
+   flex-direction: column;
+   padding-bottom: 2.8em;
+   border-bottom: 3px solid #ff9d57;
+   h2 {
+      text-align: center;
+      color: #4a4a4a;
+      padding: 20px 10px 10px 10px;
+      font-size: 2.4em;
+      font-weight: 700;
+   }
+   p {
+      line-height: 1.4;
+      text-align: center;
+      color: #4a4a4a;
+      margin-top: 20px;
+      padding: 0 10px 10px 10px;
+      font-size: 1.2em;
+   }
+   .section__1__btr {
+      @include myGrid(flex, none, center, center);
+      .btr__section__1 {
+         @extend %button;
+      }
+   }
+}
+.section__2 {
+   width: 100%;
+   .section__2__one {
+      font-size: 1.9em;
+      padding: 40px 20px 30px 20px;
+      text-align: center;
+      color: #4a4a4a;
+      margin-top: 0;
+      font-weight: 700;
+   }
+}
+.section__2__colum {
+   justify-content: space-evenly;
+}
+.section__2__background {
+   //max-width: 90%;
+   //margin: 0 auto;
+   img {
+      max-width: 100%;
+      border-radius: 10px;
+   }
+}
+.section__2__too {
+   @extend .section__2__one;
+}
+.section__2__btr {
+   @include myGrid(flex, none, center, center);
+   .btr__section__2 {
+      @extend %button;
+   }
+}
+
+.section__3 {
+   @include myGrid(flex, none, center, center);
+   flex-direction: column;
+   background: #ff9d57;
+   padding: 2em;
+   h2 {
+      color: #ffffff;
+      font-size: 1.4em;
+      font-weight: 700;
+      margin: 0 0 1.3em 0;
+   }
+   .social-playsit {
+      @include myGrid(flex, none, center, center);
+   }
+   .list {
+      margin: 0 0.6em;
+   }
+   .fa {
+      color: #ff9d57;
+      @include myGrid(flex, none, center, center);
+      background: #ffffff;
+      width: 40px;
+      height: 40px;
+      padding: 0.3em;
+      border-radius: 50%;
+      font-size: 1.2em;
+   }
+}
+
+.footer {
+   background: #f8f9fa;
+   width: 100%;
+   .footer__playlist {
+      width: 100%;
+      @include myGrid(flex, none, center, center);
+      margin: 2em 0;
+   }
+   .footer__list {
+      color: #4a4a4a;
+      cursor: pointer;
+      margin: 0 1em 0 0;
+   }
+}
+//@media (max-width: 680px) {
+//   .wraper,
+//   .wraper .container {
+//   }
+//   .section__2 .section__2__background {
+//      max-width: 90%;
+//      margin: 0 auto;
+//   }
+//}
